@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reach Media × Veya Partnership Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+:root {
+  color: #0f172a;
+  background: #f7f6f1;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f7f6f1;
+}
+
+button {
+  font: inherit;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background: #f7f6f1;
+  color: #0f172a;
+}
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  background: #020617;
+  color: #ffffff;
+  padding: 32px 20px 64px;
+}
+
+.hero-glow {
+  position: absolute;
+  border-radius: 999px;
+  opacity: 0.3;
+  filter: blur(72px);
+  pointer-events: none;
+}
+
+.hero-glow-one {
+  right: -96px;
+  top: -96px;
+  width: 320px;
+  height: 320px;
+  background: #14b8a6;
+}
+
+.hero-glow-two {
+  left: 50%;
+  bottom: -80px;
+  width: 384px;
+  height: 384px;
+  transform: translateX(-50%);
+  background: #f59e0b;
+}
+
+.nav-bar {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.brand {
+  font-size: 18px;
+  font-weight: 950;
+  letter-spacing: -0.04em;
+}
+
+.brand-subtitle {
+  margin-top: 2px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.button {
+  border: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 999px;
+  padding: 14px 20px;
+  cursor: pointer;
+  font-weight: 950;
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.14);
+}
+
+.button-light {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+.button-dark {
+  width: 100%;
+  background: #020617;
+  color: #ffffff;
+}
+
+.button-gold {
+  width: 100%;
+  background: #fbbf24;
+  color: #020617;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 96px 0 0;
+  text-align: center;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.82);
+  border-radius: 999px;
+  padding: 8px 16px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 800;
+  backdrop-filter: blur(12px);
+}
+
+.pill svg {
+  color: #fbbf24;
+}
+
+.hero-content h1 {
+  max-width: 1000px;
+  margin: 0 auto;
+  font-size: clamp(48px, 8vw, 112px);
+  line-height: 0.88;
+  letter-spacing: -0.075em;
+  font-weight: 950;
+}
+
+.hero-content p {
+  max-width: 700px;
+  margin: 28px auto 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: clamp(17px, 2vw, 20px);
+  line-height: 1.65;
+}
+
+.menu-section,
+.why-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 64px 20px;
+}
+
+.section-intro {
+  max-width: 760px;
+  margin-bottom: 40px;
+}
+
+.section-intro.centered {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.section-label {
+  margin-bottom: 12px;
+  color: #0f766e;
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.section-intro h2,
+.why-copy h2 {
+  margin: 0;
+  font-size: clamp(40px, 5vw, 72px);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  font-weight: 950;
+}
+
+.section-intro p,
+.why-copy p {
+  margin: 20px 0 0;
+  color: #475569;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.tier-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.tier-wrap {
+  position: relative;
+  height: 100%;
+}
+
+.featured-wrap {
+  margin-top: -20px;
+}
+
+.recommended-badge {
+  position: absolute;
+  left: 24px;
+  top: -16px;
+  z-index: 3;
+  background: #fbbf24;
+  color: #020617;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 11px;
+  font-weight: 950;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.18);
+}
+
+.tier-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 32px;
+  padding: 28px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
+  overflow: hidden;
+}
+
+.featured-card {
+  background: #020617;
+  color: #ffffff;
+  border-color: #020617;
+  box-shadow: 0 24px 54px rgba(15, 23, 42, 0.24);
+}
+
+.tier-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.tier-eyebrow {
+  margin-bottom: 8px;
+  color: #0f766e;
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.featured-card .tier-eyebrow {
+  color: #fbbf24;
+}
+
+.tier-card h3 {
+  margin: 0;
+  font-size: 26px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-weight: 950;
+}
+
+.tier-icon {
+  flex: 0 0 auto;
+  display: inline-flex;
+  padding: 12px;
+  border-radius: 18px;
+  background: #f0fdfa;
+  color: #0f766e;
+}
+
+.featured-card .tier-icon {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fbbf24;
+}
+
+.price-block {
+  margin-bottom: 24px;
+}
+
+.price {
+  font-size: 32px;
+  font-weight: 950;
+  letter-spacing: -0.05em;
+}
+
+.price-block p {
+  margin: 8px 0 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.featured-card .price-block p {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.best-for {
+  margin-bottom: 24px;
+  padding: 16px;
+  border-radius: 24px;
+  background: #f8fafc;
+}
+
+.featured-card .best-for {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.mini-label {
+  margin-bottom: 4px;
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 950;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.featured-card .mini-label {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.best-for p {
+  margin: 0;
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.featured-card .best-for p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.highlight-list {
+  margin: 0 0 28px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.highlight-list li {
+  display: flex;
+  gap: 12px;
+  color: #334155;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.highlight-list svg {
+  flex: 0 0 auto;
+  margin-top: 1px;
+  color: #0f766e;
+}
+
+.featured-card .highlight-list li {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.featured-card .highlight-list svg {
+  color: #fbbf24;
+}
+
+.card-actions {
+  margin-top: auto;
+}
+
+.card-actions p {
+  margin: 12px 0 0;
+  color: #94a3b8;
+  text-align: center;
+  font-size: 12px;
+}
+
+.featured-card .card-actions p {
+  color: rgba(255, 255, 255, 0.48);
+}
+
+.why-section {
+  padding-top: 0;
+  padding-bottom: 80px;
+}
+
+.why-card {
+  background: #ffffff;
+  border-radius: 40px;
+  padding: 40px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 40px;
+}
+
+.principle-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.principle-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 20px;
+}
+
+.principle-icon {
+  display: inline-flex;
+  padding: 12px;
+  border-radius: 18px;
+  margin-bottom: 16px;
+  background: #ffffff;
+  color: #0f766e;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.06);
+}
+
+.principle-card h3 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: -0.03em;
+  font-weight: 950;
+}
+
+.principle-card p {
+  margin: 8px 0 0;
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(2, 6, 23, 0.7);
+  backdrop-filter: blur(8px);
+}
+
+.modal-card {
+  width: 100%;
+  max-width: 900px;
+  max-height: 92vh;
+  overflow: auto;
+  background: #ffffff;
+  border-radius: 32px;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.28);
+}
+
+.modal-header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-bottom: 1px solid #e2e8f0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.modal-eyebrow {
+  color: #0f766e;
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.modal-header h2 {
+  margin: 4px 0 0;
+  font-size: 26px;
+  font-weight: 950;
+  letter-spacing: -0.05em;
+}
+
+.close-button {
+  border: 0;
+  background: #f1f5f9;
+  border-radius: 999px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.modal-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 24px;
+  padding: 24px;
+}
+
+.investment-panel {
+  background: #020617;
+  color: #ffffff;
+  border-radius: 24px;
+  padding: 24px;
+}
+
+.panel-label {
+  margin: 0;
+  color: #fbbf24;
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.panel-label.muted {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.modal-price {
+  margin-top: 8px;
+  font-size: 42px;
+  font-weight: 950;
+  letter-spacing: -0.06em;
+}
+
+.modal-subprice,
+.outcome {
+  margin: 12px 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.6;
+}
+
+.divider {
+  height: 1px;
+  margin: 24px 0;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.use-case {
+  margin-top: 24px;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.modal-details {
+  display: grid;
+  gap: 24px;
+}
+
+.modal-details h3 {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 950;
+  letter-spacing: -0.03em;
+}
+
+.detail-list {
+  display: grid;
+  gap: 8px;
+}
+
+.detail-item {
+  border-radius: 18px;
+  padding: 12px;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.detail-item.included {
+  display: flex;
+  gap: 12px;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+}
+
+.detail-item.included svg {
+  flex: 0 0 auto;
+  margin-top: 2px;
+  color: #0f766e;
+}
+
+.detail-item.excluded {
+  background: #f8fafc;
+  color: #64748b;
+}
+
+@media (max-width: 980px) {
+  .tier-grid,
+  .why-card,
+  .modal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-wrap {
+    margin-top: 0;
+  }
+
+  .principle-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-bar {
+    align-items: flex-start;
+  }
+
+  .button-light {
+    display: none;
+  }
+
+  .hero-content {
+    padding-top: 72px;
+  }
+
+  .hero-content h1 {
+    font-size: 52px;
+  }
+
+  .pill {
+    font-size: 12px;
+  }
+
+  .menu-section,
+  .why-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .why-card {
+    padding: 24px;
+    border-radius: 28px;
+  }
+}
+
+  </style>
+  <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@18.2.0",
+        "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+        "framer-motion": "https://esm.sh/framer-motion@10.16.4",
+        "lucide-react": "https://esm.sh/lucide-react@0.292.0"
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel" data-type="module">
+    import React, { useState } from "react";
+    import { createRoot } from "react-dom/client";
+    import { motion } from "framer-motion";
+    import { Check, ArrowRight, Sparkles, TrendingUp, Crown, MonitorPlay, QrCode, FileText, Users, Globe2, X } from "lucide-react";
+
+const tiers = [
+  {
+    id: "creative-engine",
+    name: "Creative Engine Partnership",
+    eyebrow: "Tier 1",
+    price: "No upfront fee",
+    subprice:
+      "Veya receives 75% of creative revenue. Reach keeps 100% of media placement revenue.",
+    icon: MonitorPlay,
+    tone: "Low-risk starting point",
+    bestFor:
+      "Reach wants to offer full-service ad onboarding immediately without hiring a creative team.",
+    outcome:
+      "Reach can sell creative-supported campaigns while Veya owns and operates the creative fulfillment layer.",
+    highlights: [
+      "Need Creative? website section/page",
+      "Creative rate card and intake flow",
+      "QR Action Campaign explainer",
+      "Sample static and motion ad mockups",
+      "Veya produces creative for referred advertisers",
+    ],
+    includes: [
+      "Creative offer copy and simple client-facing menu",
+      "Advertiser creative intake form",
+      "Basic sales script for upselling creative",
+      "Basic fulfillment SOP",
+      "Static ads, motion ads, QR ads, landing page add-ons, launch packs, monthly refreshes",
+    ],
+    notIncluded: [
+      "Full website redesign",
+      "Dynamic pricing system",
+      "Media kit and full sales collateral",
+      "Monthly strategic consulting",
+      "Fractional CMO support",
+    ],
+    useCase:
+      "Best first step if Reach wants to test full-service onboarding before committing to a larger growth engagement.",
+  },
+  {
+    id: "revenue-system",
+    name: "Revenue System Partner",
+    eyebrow: "Tier 2",
+    price: "$2,750 / month",
+    subprice: "Recommended 3-month minimum.",
+    icon: TrendingUp,
+    tone: "Recommended growth tier",
+    bestFor:
+      "Reach wants to raise prices through better packages, pricing logic, QR campaigns, and a stronger sales system.",
+    outcome:
+      "Reach moves from selling screen time to selling higher-value campaign products.",
+    featured: true,
+    highlights: [
+      "Everything in Tier 1",
+      "Dynamic pricing framework",
+      "Location Value Matrix",
+      "Campaign Complexity Scale",
+      "Media kit, package sheet, and proposal templates",
+    ],
+    includes: [
+      "Campaign package ladder: Basic, Motion, QR Action, Launch, Full Network",
+      "Monthly offer and pricing review",
+      "QR Action Campaign offer development",
+      "Host acquisition landing page strategy",
+      "Advertiser proposal template and objection handling",
+      "Website sales-flow strategy for priority pages",
+      "Training and support for one internal point person",
+    ],
+    notIncluded: [
+      "Day-to-day sales management",
+      "Full leadership of the growth function",
+      "Managing all contractors/vendors",
+      "Full website rebuild execution unless separately scoped",
+    ],
+    useCase:
+      "Best fit if Reach wants to build a serious media product without hiring a full-time marketing or growth lead.",
+  },
+  {
+    id: "fractional-cmo",
+    name: "Fractional CMO / Growth Operator",
+    eyebrow: "Tier 3",
+    price: "$6,750 / month",
+    subprice: "Recommended 3–6 month minimum.",
+    icon: Crown,
+    tone: "Turnkey growth leadership",
+    bestFor:
+      "Reach wants Veya to step in as a hands-on growth operator and lead the transformation.",
+    outcome:
+      "Reach gets a stand-in growth lead to reposition the company, improve advertiser acquisition, and build higher-value media products.",
+    highlights: [
+      "Everything in Tiers 1 and 2",
+      "Full repositioning strategy",
+      "Premium advertiser pipeline",
+      "Website and sales-system leadership",
+      "Monthly growth reporting and optimization",
+    ],
+    includes: [
+      "Key account targeting for banks, telecoms, tourism, real estate, events, government, NGOs, and schools",
+      "Corporate pitch deck and campaign-specific sales assets",
+      "Creative quality control across major campaigns",
+      "Contractor/vendor coordination where needed",
+      "Host acquisition strategy and materials",
+      "Programmatic readiness roadmap",
+      "Monthly growth priorities and revenue opportunity mapping",
+    ],
+    notIncluded: [
+      "Guarantee of closed sales",
+      "Unlimited production work outside agreed creative scopes",
+      "Paid media budgets, ad spend, or third-party platform fees",
+    ],
+    useCase:
+      "Best fit if Reach wants speed, leadership, and execution without hiring a full-time CMO and team.",
+  },
+];
+
+const principles = [
+  {
+    icon: QrCode,
+    title: "Measurable action beats passive visibility",
+    body:
+      "A QR-enabled campaign is a different product from a static flyer on a screen. It can send viewers to WhatsApp, a booking page, a ticket link, a menu, an application form, or a lead capture page.",
+  },
+  {
+    icon: Globe2,
+    title: "Not every location has the same value",
+    body:
+      "Airport, supermarket, hospitality, hardware, and retail traffic should not be priced the same. Location value, dwell time, audience intent, and campaign objective should influence the offer.",
+  },
+  {
+    icon: FileText,
+    title: "The website should support better offers",
+    body:
+      "The site should not simply look nicer. It should help Reach sell packages, explain QR/action campaigns, recruit host locations, and create price permission.",
+  },
+  {
+    icon: Users,
+    title: "Creative onboarding removes a sales blocker",
+    body:
+      "If an advertiser wants to run but does not have a proper 15-second ad, that should not kill the deal. The creative engine turns that blocker into a new revenue stream.",
+  },
+];
+
+function Button({ children, className = "", ...props }) {
+  return (
+    <button className={`button ${className}`} {...props}>
+      {children}
+    </button>
+  );
+}
+
+function TierCard({ tier, onSelect }) {
+  const Icon = tier.icon;
+
+  return (
+    <motion.div
+      layout
+      initial={{ opacity: 0, y: 18 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.45 }}
+      className={`tier-wrap ${tier.featured ? "featured-wrap" : ""}`}
+    >
+      {tier.featured && <div className="recommended-badge">Recommended</div>}
+      <article className={`tier-card ${tier.featured ? "featured-card" : ""}`}>
+        <div className="tier-top">
+          <div>
+            <div className="tier-eyebrow">{tier.eyebrow}</div>
+            <h3>{tier.name}</h3>
+          </div>
+          <div className="tier-icon">
+            <Icon size={24} />
+          </div>
+        </div>
+
+        <div className="price-block">
+          <div className="price">{tier.price}</div>
+          <p>{tier.subprice}</p>
+        </div>
+
+        <div className="best-for">
+          <div className="mini-label">Best for</div>
+          <p>{tier.bestFor}</p>
+        </div>
+
+        <ul className="highlight-list">
+          {tier.highlights.map((item) => (
+            <li key={item}>
+              <Check size={17} />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+
+        <div className="card-actions">
+          <Button
+            onClick={() => onSelect(tier)}
+            className={tier.featured ? "button-gold" : "button-dark"}
+          >
+            View details <ArrowRight size={16} />
+          </Button>
+          <p>{tier.tone}</p>
+        </div>
+      </article>
+    </motion.div>
+  );
+}
+
+function DetailModal({ tier, onClose }) {
+  if (!tier) return null;
+
+  return (
+    <div className="modal-backdrop">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.96, y: 14 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        className="modal-card"
+      >
+        <div className="modal-header">
+          <div>
+            <div className="modal-eyebrow">{tier.eyebrow}</div>
+            <h2>{tier.name}</h2>
+          </div>
+          <button onClick={onClose} className="close-button" aria-label="Close details">
+            <X size={20} />
+          </button>
+        </div>
+
+        <div className="modal-grid">
+          <div className="investment-panel">
+            <p className="panel-label">Investment</p>
+            <div className="modal-price">{tier.price}</div>
+            <p className="modal-subprice">{tier.subprice}</p>
+            <div className="divider" />
+            <p className="panel-label muted">Outcome</p>
+            <p className="outcome">{tier.outcome}</p>
+            <div className="use-case">{tier.useCase}</div>
+          </div>
+
+          <div className="modal-details">
+            <div>
+              <h3>What’s included</h3>
+              <div className="detail-list">
+                {tier.includes.map((item) => (
+                  <div key={item} className="detail-item included">
+                    <Check size={17} />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h3>Not included / moves to another tier</h3>
+              <div className="detail-list">
+                {tier.notIncluded.map((item) => (
+                  <div key={item} className="detail-item excluded">
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  );
+}
+
+function App() {
+  const [selected, setSelected] = useState(null);
+
+  return (
+    <main className="app-shell">
+      <section className="hero-section">
+        <div className="hero-glow hero-glow-one" aria-hidden="true" />
+        <div className="hero-glow hero-glow-two" aria-hidden="true" />
+
+        <nav className="nav-bar">
+          <div>
+            <div className="brand">Reach Media × Veya</div>
+            <div className="brand-subtitle">Partnership menu</div>
+          </div>
+          <Button className="button-light">Discuss next step</Button>
+        </nav>
+
+        <div className="hero-content">
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.55 }}
+          >
+            <div className="pill">
+              <Sparkles size={16} />
+              Three ways to build the next stage of Reach Media
+            </div>
+            <h1>From screen time to higher-value campaign products.</h1>
+            <p>
+              Reach already has the physical media network. The opportunity now is to package it better: creative onboarding, QR/action campaigns, location-based pricing, host acquisition, and a sales system that supports premium offers.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="menu-section">
+        <div className="section-intro centered">
+          <div className="section-label">The Chinese menu</div>
+          <h2>Choose the level of involvement.</h2>
+          <p>
+            Each tier is designed to solve a different version of the same problem: Reach needs stronger offers, cleaner onboarding, and more price permission around the inventory it already has.
+          </p>
+        </div>
+
+        <div className="tier-grid">
+          {tiers.map((tier) => (
+            <TierCard key={tier.id} tier={tier} onSelect={setSelected} />
+          ))}
+        </div>
+      </section>
+
+      <section className="why-section">
+        <div className="why-card">
+          <div className="why-copy">
+            <div className="section-label">Why this works</div>
+            <h2>The goal is not to charge more for the same ad.</h2>
+            <p>
+              The goal is to create better products: motion campaigns, QR action campaigns, launch packages, premium location bundles, host acquisition, and a website that makes the value clear.
+            </p>
+          </div>
+          <div className="principle-grid">
+            {principles.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div key={item.title} className="principle-card">
+                  <div className="principle-icon">
+                    <Icon size={21} />
+                  </div>
+                  <h3>{item.title}</h3>
+                  <p>{item.body}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <DetailModal tier={selected} onClose={() => setSelected(null)} />
+    </main>
+  );
+}
+
+
+    createRoot(document.getElementById("root")).render(
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    );
+  </script>
+</body>
+</html>
